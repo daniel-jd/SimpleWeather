@@ -71,7 +71,7 @@ extension CitiesViewController: UITableViewDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let vc = storyboard.instantiateViewController(withIdentifier: "WeatherViewController") as? WeatherViewController {
-            weatherManager.fetchWeather(cityName: city)
+            vc.city = city
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
